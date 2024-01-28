@@ -1,0 +1,47 @@
+.what-we-do-text{
+    font-size: 24px;
+}
+.what-we-do-description{
+    text-align: center;
+}
+#whatwedo,.card{
+    background-color: #f5f8fb;
+}
+.card{
+    border: none;
+}
+.card-body>a{
+    text-decoration: none;
+}
+#whatwedo button,.card-body>a {
+    background-color: #3482FF;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+#whatwedo button:hover,.card-body>a:hover{
+    background-color: #100c08;
+}
+.custom-card-body {
+    padding-left: 0;
+}
+.custom-text-justify {
+    text-align: justify;
+}
+.card>img{
+    transition: transform 0.3s ease-in-out;
+    border-radius: 3px;
+}
+.card img:hover{
+    transform: scale(1.1);
+    overflow-x: hidden;
+    cursor: pointer;
+}
+@media screen and (max-width:768px) {
+    .what-we-do-description{
+        text-align: justify;
+    }
+}

@@ -1,0 +1,23 @@
+<section id="whatwedo">
+    <div class="d-flex flex-column align-items-center who" data-aos="zoom-in-right" data-aos-duration="3000">
+        <h2 class="mt-5 what-we-do-text">{{item.title}}</h2>
+        <h6 class="my-4  what-we-do-subtitle">{{item.subtitle}}</h6>
+        <p class="my-2 mx-5  what-we-do-description">{{item.description}}</p>
+    </div>
+    <div class="row  mt-5 mx-5 gy-3">
+        @for(item of multiSlides;track item.title){
+            <div class="col-md-4" data-aos="zoom-in-up" data-aos-duration="3000">
+                <div class="card">
+                    <img src={{item.image}} class="card-img-top img-fluid" alt={{item.title}}>
+                    <div class="card-body custom-card-body">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="card-text custom-text-justify">{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="d-flex justify-content-center fade-in my-5" data-aos="flip-right" data-aos-duration="1000">
+        <button class="mb-5">Read more...</button>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+.cmp-data{
+    cursor: pointer;
+}
+.btn-color{
+    background-color: #3482FF;
+    color: white;
+    transition: background-color 0.5s all ease;
+}
+.btn-color:hover{
+    background-color: black;
+}

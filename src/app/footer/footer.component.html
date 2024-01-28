@@ -1,0 +1,89 @@
+<footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!--Grid row-->
+        <div class="row mt-4">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 my-4 mb-lg-0">
+                
+                <h5 class="text-uppercase mb-4"> <img src="../../assets/images/icons8-global-64.png" alt="" style="height: 45px; width: 45px;" class="me-2">{{item.title}}</h5>
+
+                <p>
+                    {{item.subTitle}}
+                </p>
+
+                <p>
+                    {{item.description}}
+                </p>
+
+                <div class="mt-4">
+                    <!-- Facebook -->
+                    <a type="button" class="btn btn-floating btn-color">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <!-- Dribbble -->
+                    <a type="button" class="btn btn-floating btn-color mx-3">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a type="button" class="btn btn-floating btn-color ">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <!-- Google + -->
+                    <a type="button" class="btn btn-floating btn-color mx-3">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                    <!-- Linkedin -->
+                </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 my-4 mb-md-0">
+                <h5 class="text-uppercase mt-2 mb-4">Contact Info</h5>
+                <ul class="fa-ul" style="margin-left: 1.65em;">
+                    <li class="mb-3">
+                        <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-1 cmp-data">{{item.location}}</span>
+                    </li>
+                    <li class="mb-3">
+                        <span class="fa-li"><i class="fas fa-envelope"></i></span><span
+                            class="ms-1 cmp-data"><a class="text-white" href="mailto:Parthiban.Rangaraj@outlook.com?">{{item.mailId}}</a></span>
+                    </li>
+                    <li class="mb-3">
+                        <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-1 cmp-data">{{item.contactNum}}</span>
+                    </li>
+                    <li class="mb-3">
+                        <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-1 cmp-data">{{item.contactNum}}</span>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 my-4 mb-md-0">
+                <h5 class="text-uppercase mb-3">Opening hours</h5>
+
+                <ol class="list-group">
+                    @for (value of openingHours; track $index) {
+                        <li class="d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-1">
+                                <div>{{value.day}}</div>
+                            </div>
+                            <span class="mt-2" [ngClass]="{'bg-danger':value.time==='Close','px-1':value.time==='Close'}">{{value.time}}</span>
+                        </li>
+                    }
+                </ol>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright:
+        <span class="text-white">ITechGlobalSolutions.com</span>
+    </div>
+    <!-- Copyright -->
+</footer>

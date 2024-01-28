@@ -1,0 +1,64 @@
+.form-color{
+    /* background-color: #283657; */
+    background-color: #f3f7fa;
+    color: rgb(0, 0, 0);
+}
+#firstName {
+    width: 300px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+}
+#lastName {
+    width: 300px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+}
+#contactNum {
+    width: 300px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+}
+
+#email {
+    width: 300px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+}
+.form-control:focus {
+    border-color: #f26101; /* Change the border color on focus */
+    box-shadow: 0 0 0 0.2rem #fc6805; /* Add a box shadow on focus */
+}
+.btn-style{
+    background-color: #f26101;
+    /* background-color: #3498db; */
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn-style:hover{
+    background-color: #100c08;
+}
+
+.Contact-text {
+    font-size: 24px;
+}
+    .Contact-description {
+    text-align: center;
+}
+.Contact-subtitle{
+    text-align: center;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-label::before {
+    content: " *";
+    color: red;
+}
+@media screen and (max-width: 768px) {
+    .Contact-description {
+    text-align: justify;
+}
+}

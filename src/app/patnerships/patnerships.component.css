@@ -1,0 +1,16 @@
+.partnership-text {
+font-size: 24px;
+}
+.partnership-description {
+text-align: center;
+}
+.img-style{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+.partnership-description {
+    text-align: justify;
+}
+}

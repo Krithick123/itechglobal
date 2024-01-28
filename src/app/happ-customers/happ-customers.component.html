@@ -1,0 +1,22 @@
+<section id="happyCustomers" class="partnerships pb-5">
+    <div class="d-flex flex-column align-items-center who" data-aos="zoom-in-right" data-aos-duration="3000">
+        <h2 class="mt-5 happy-text">{{item.title}}</h2>
+        <h6 class="my-4  happy-subtitle">{{item.subtitle}}</h6>
+        <p class="my-2 mx-5  happy-description">{{item.description}}</p>
+    </div>
+    <div class="container mt-5">
+        <owl-carousel-o [options]="customOptions">
+            @for (item of images; track $index) {
+                <ng-template carouselSlide>
+                    <div class="slide bg-light" data-aos="zoom-in-up" data-aos-duration="3000">
+                        <img src={{item.image}} alt="img 1" />
+                        <p class="item-des">{{item.description}}</p>
+                    </div>
+                </ng-template>
+            }
+        </owl-carousel-o>
+    </div>
+    <div class="d-flex justify-content-center   my-5" data-aos="flip-right" data-aos-duration="1000">
+        <button class="mb-5 btn-style">Read more...</button>
+    </div>
+</section>

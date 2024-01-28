@@ -1,0 +1,42 @@
+.happy-text{
+    font-size: 24px;
+    color: white;
+    /* color: black; */
+}
+.happy-description{
+    text-align: center;
+    color: white;
+    /* color: black; */
+}
+#happyCustomers{
+    background-color: #283657;
+    /* background-color: #f5f8fa; */
+}
+.happy-subtitle{
+    color: white;
+    /* color: black; */
+}
+.item-des{
+    color: black;
+    text-align: justify;
+    padding: 15px 10px;
+    font-size: 14px;
+}
+.btn-style{
+    background-color: #f26101;
+    /* background-color: #3498db; */
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn-style:hover{
+    background-color: #100c08;
+}
+@media screen and (max-width:768px) {
+    .happy-description{
+        text-align: justify;
+    }
+}

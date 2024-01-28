@@ -1,0 +1,19 @@
+<section id="partner" class="partnerships">
+    <div class="d-flex flex-column align-items-center" data-aos="fade-right" data-aos-duration="3000">
+        <h2 class="mt-5 partnership-text">{{item.title}}</h2>
+        <h6 class="my-4  partnership-subtitle">{{item.subtitle}}</h6>
+        <p class="my-2 mx-5  partnership-description">{{item.description}}</p>
+    </div>
+    <div class="container my-5">
+        <owl-carousel-o [options]="customOptions">
+            @for (item of images; track $index) {
+                <ng-template carouselSlide>
+                    <div class="slide">
+                        <img src={{item.image}} alt="img" class="img-style" />
+                        <p class="text-center">{{item.cmpName}}</p>
+                    </div>
+                </ng-template>
+            }
+        </owl-carousel-o>
+    </div>
+</section>

@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap");
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: "Josefin Sans", sans-serif;
+}
+.partnerships .owl-next,
+.partnerships .owl-prev {
+  background-color: #f3f7fa !important;
+  color: #222 !important;
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 50% !important;
+  position: absolute;
+  top: 50%;
+}
+.partnerships .owl-next i,
+.partnerships .owl-prev i {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s all ease;
+}
+.partnerships .owl-next {
+  right: -68px;
+  transform: translate(-50%, -50%);
+}
+.partnerships .owl-prev {
+  left: -28px;
+  transform: translate(-50%, -50%);
+}
+.partnerships .owl-next:hover,
+.partnerships .owl-prev:hover {
+  background-color: #3482ff !important;
+  color: white !important;
+}
+@media screen and (max-width: 768px) {
+  .partnerships .owl-next {
+    display: none !important;
+  }
+  .partnerships .owl-prev {
+    display: none !important;
+  }
+}

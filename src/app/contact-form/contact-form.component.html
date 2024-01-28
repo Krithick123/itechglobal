@@ -1,0 +1,98 @@
+<section id="Contact">
+    <div class="d-flex flex-column align-items-center" data-aos="fade-right" data-aos-duration="3000">
+        <h2 class="mt-5 Contact-text">{{item.title}}</h2>
+        <h6 class="my-4  Contact-subtitle">{{item.subtitle}}</h6>
+        <p class="my-2 mx-5  Contact-description">{{item.description}}</p>
+    </div>
+    <div class="container my-5">
+        <form [formGroup]="contactForm" (submit)="onSubmit()" class="mx-md-5 form-color p-5 rounded-2"  data-aos="zoom-in-up"
+            data-aos-duration="3000">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <!-- Name -->
+                    <div class="my-3 ps-md-5">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" formControlName="firstName" id="firstName"
+                            name="firstName">
+                        <br>
+                        <span *ngIf="!firstName?.valid && (firstName?.touched || firstName?.dirty)">
+                            <span class="text-danger" *ngIf="firstName?.errors?.['required']">
+                                First name is required
+                            </span>
+                            <span class="text-danger" *ngIf="firstName?.errors?.['minlength']">
+                                Minimum length is 6 characters
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <!-- lastName -->
+                    <div class="my-3 ps-md-5">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" formControlName="lastName" id="lastName"
+                            name="lastName">
+                        <br>
+                        <span *ngIf="!lastName?.valid && (lastName?.touched || lastName?.dirty)">
+                            <span class="text-danger" *ngIf="lastName?.errors?.['required']">
+                                Last name is required
+                            </span>
+                            <span class="text-danger" *ngIf="lastName?.errors?.['maxlength']">
+                                Maximum length is 12 characters
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <!-- Email -->
+                    <div class="my-3 ps-md-5">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" formControlName="email" id="email" name="email">
+                        <br>
+                        <span *ngIf="!email?.valid && (email?.touched || email?.dirty)">
+                            <span class="text-danger" *ngIf="email?.errors?.['required']">
+                                Email  is required
+                            </span>
+                            <span class="text-danger" *ngIf="email?.errors?.['pattern']">
+                                Invalid Email 
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <!-- contactNum -->
+                    <div class="my-3 ps-md-5">
+                        <label for="contactNum" class="form-label">Contact Number</label>
+                        <input type="number" class="form-control" formControlName="contactNum" id="contactNum"
+                            name="contactNum">
+                        <br>
+                        <span *ngIf="!contactNum?.valid && (contactNum?.touched || contactNum?.dirty)">
+                            <span class="text-danger" *ngIf="contactNum?.errors?.['required']">
+                                Contact number is required
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message -->
+            <div class="my-3 px-md-5">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" formControlName="message" id="message" name="message"
+                    rows="4"></textarea>
+                    <br>
+                    <span *ngIf="!message?.valid && (message?.touched || message?.dirty)">
+                        <span class="text-danger" *ngIf="message?.errors?.['required']">
+                            Message  is required
+                        </span>
+                    </span>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center ">
+                <button type="submit" [disabled]="!contactForm.valid" class="btn-style mt-3">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
